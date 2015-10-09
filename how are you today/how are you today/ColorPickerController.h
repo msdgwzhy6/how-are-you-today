@@ -12,5 +12,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *colorSet1;
 @property (strong, nonatomic) IBOutlet UIButton *colorSet2;
 @property (strong, nonatomic) IBOutlet UIButton *colorSet3;
+@property (strong, nonatomic) IBOutlet UIImageView *imOK1;
+@property (strong, nonatomic) IBOutlet UIImageView *imOK2;
+@property (strong, nonatomic) IBOutlet UIImageView *imOK3;
 
 @end

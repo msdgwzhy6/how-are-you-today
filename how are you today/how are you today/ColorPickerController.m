@@ -26,19 +26,32 @@
     [self.colorSet2 addTarget:self action:@selector(selectColor2) forControlEvents:UIControlEventTouchUpInside];
     [self.colorSet3 setImage:im3 forState:UIControlStateNormal];
     [self.colorSet3 addTarget:self action:@selector(selectColor3) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.imOK1.image=[UIImage imageNamed:@"OK"];
+    self.imOK2.image=[UIImage imageNamed:@"OK"];
+    self.imOK3.image=[UIImage imageNamed:@"OK"];
+    self.imOK1.hidden=YES;
+    self.imOK2.hidden=YES;
+    self.imOK3.hidden=YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
     NSInteger defaultChoice=[[[NSUserDefaults standardUserDefaults] valueForKey:@"defaultColorSet"] integerValue];
     switch (defaultChoice) {
         case 1:
-            [self.colorSet1.layer setBorderColor:[UIColor redColor].CGColor];
-            [self.colorSet1.layer setBorderWidth:2.5];
+            self.imOK1.hidden=NO;
+            self.imOK2.hidden=YES;
+            self.imOK3.hidden=YES;
             break;
         case 2:
-            [self.colorSet2.layer setBorderColor:[UIColor redColor].CGColor];
-            [self.colorSet1.layer setBorderWidth:2.5];
+            self.imOK1.hidden=YES;
+            self.imOK2.hidden=NO;
+            self.imOK3.hidden=YES;
             break;
         case 3:
-            [self.colorSet3.layer setBorderColor:[UIColor redColor].CGColor];
-            [self.colorSet1.layer setBorderWidth:2.5];
+            self.imOK1.hidden=YES;
+            self.imOK2.hidden=YES;
+            self.imOK3.hidden=NO;
             break;
             
         default:
@@ -47,15 +60,24 @@
 }
 
 - (void)selectColor1 {
-    [[NSUserDefaults standardUserDefaults] setValue:@1 forKey:@"defaultColorSet"];
+    NSInteger choice=1;
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInteger:choice] forKey:@"defaultColorSet"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"colorChanged" object:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)selectColor2 {
-    [[NSUserDefaults standardUserDefaults] setValue:@2 forKey:@"defaultColorSet"];
+    NSInteger choice=2;
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInteger:choice] forKey:@"defaultColorSet"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"colorChanged" object:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)selectColor3 {
-    [[NSUserDefaults standardUserDefaults] setValue:@3 forKey:@"defaultColorSet"];
+    NSInteger choice=3;
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInteger:choice] forKey:@"defaultColorSet"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"colorChanged" object:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

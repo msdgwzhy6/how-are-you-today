@@ -46,9 +46,19 @@ static UIColor* terribleColor;
     NSInteger userColor=[[[NSUserDefaults standardUserDefaults] valueForKey:@"defaultColorSet"] integerValue];
     switch (userColor) {
         case 1:
-            fantasticColor=[UIColor colorWithRed:236/255.0 green:80/255.0 blue:94/255.0 alpha:1];
-            ordinaryColor=[UIColor colorWithRed:176/255.0 green:220/255.0 blue:233/255.0 alpha:1];
-            terribleColor=[UIColor colorWithRed:135/255.0 green:135/255.0 blue:135/255.0 alpha:1];
+            fantasticColor=[UIColor colorWithRed:252/255.0 green:118/255.0 blue:7/255.0 alpha:1];
+            ordinaryColor=[UIColor colorWithRed:239/255.0 green:206/255.0 blue:125/255.0 alpha:1];
+            terribleColor=[UIColor colorWithRed:238/255.0 green:236/255.0 blue:188/255.0 alpha:1];
+            break;
+        case 2:
+            fantasticColor=[UIColor colorWithRed:240/255.0 green:116/255.0 blue:132/255.0 alpha:1];
+            ordinaryColor=[UIColor colorWithRed:178/255.0 green:218/255.0 blue:199/255.0 alpha:1];
+            terribleColor=[UIColor colorWithRed:245/255.0 green:193/255.0 blue:148/255.0 alpha:1];
+            break;
+        case 3:
+            fantasticColor=[UIColor colorWithRed:255/255.0 green:74/255.0 blue:121/255.0 alpha:1];
+            ordinaryColor=[UIColor colorWithRed:232/255.0 green:179/255.0 blue:145/255.0 alpha:1];
+            terribleColor=[UIColor colorWithRed:255/255.0 green:233/255.0 blue:163/255.0 alpha:1];
             break;
             
         default:
@@ -60,7 +70,13 @@ static UIColor* terribleColor;
     NSInteger userColor=[[[NSUserDefaults standardUserDefaults] valueForKey:@"defaultColorSet"] integerValue];
     switch (userColor) {
         case 1:
-            return [UIColor colorWithRed:236/255.0 green:80/255.0 blue:94/255.0 alpha:1];
+            return [UIColor colorWithRed:252/255.0 green:118/255.0 blue:7/255.0 alpha:1];
+            break;
+        case 2:
+            return [UIColor colorWithRed:240/255.0 green:116/255.0 blue:132/255.0 alpha:1];
+            break;
+        case 3:
+            return [UIColor colorWithRed:255/255.0 green:74/255.0 blue:121/255.0 alpha:1];
             break;
             
         default:
@@ -73,7 +89,13 @@ static UIColor* terribleColor;
     NSInteger userColor=[[[NSUserDefaults standardUserDefaults] valueForKey:@"defaultColorSet"] integerValue];
     switch (userColor) {
         case 1:
-            return [UIColor colorWithRed:176/255.0 green:220/255.0 blue:233/255.0 alpha:1];
+            return [UIColor colorWithRed:239/255.0 green:206/255.0 blue:125/255.0 alpha:1];
+            break;
+        case 2:
+            return [UIColor colorWithRed:178/255.0 green:218/255.0 blue:199/255.0 alpha:1];
+            break;
+        case 3:
+            return [UIColor colorWithRed:232/255.0 green:179/255.0 blue:145/255.0 alpha:1];
             break;
             
         default:
@@ -86,7 +108,13 @@ static UIColor* terribleColor;
     NSInteger userColor=[[[NSUserDefaults standardUserDefaults] valueForKey:@"defaultColorSet"] integerValue];
     switch (userColor) {
         case 1:
-            return [UIColor colorWithRed:135/255.0 green:135/255.0 blue:135/255.0 alpha:1];
+            return [UIColor colorWithRed:238/255.0 green:236/255.0 blue:188/255.0 alpha:1];
+            break;
+        case 2:
+            return [UIColor colorWithRed:245/255.0 green:193/255.0 blue:148/255.0 alpha:1];
+            break;
+        case 3:
+            return [UIColor colorWithRed:255/255.0 green:233/255.0 blue:163/255.0 alpha:1];
             break;
             
         default:
@@ -210,7 +238,6 @@ static UIColor* terribleColor;
         [self.fantasticView addSubview:reselectButton];
         self.emotion=EmotionTypeFantastic;
         [self setValue:textField.text forKey:@"comment"];
-        NSLog(@"there");
         NSLog(@"%@",textField.text);
     }];
     

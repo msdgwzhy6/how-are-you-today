@@ -6,9 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorPickerController">
             <connections>
-                <outlet property="colorSet1" destination="HYp-09-Rwe" id="NaO-EM-6Wc"/>
-                <outlet property="colorSet2" destination="it9-wH-Wna" id="tUP-Pt-SOU"/>
-                <outlet property="colorSet3" destination="zwI-yt-OQe" id="IMN-G2-dTz"/>
+                <outlet property="colorSet1" destination="zwI-yt-OQe" id="E18-TT-cJh"/>
+                <outlet property="colorSet2" destination="it9-wH-Wna" id="VY8-TJ-dVh"/>
+                <outlet property="colorSet3" destination="HYp-09-Rwe" id="tYW-Sp-UoD"/>
+                <outlet property="imOK1" destination="ON9-Ph-7yv" id="lUo-5o-O3B"/>
+                <outlet property="imOK2" destination="2m5-ut-S8M" id="hay-qi-cND"/>
+                <outlet property="imOK3" destination="UOi-S4-4cn" id="9eF-fZ-ScV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,6 +20,12 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYp-09-Rwe">
+                    <rect key="frame" x="44" y="378" width="292" height="81"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it9-wH-Wna">
                     <rect key="frame" x="44" y="258" width="292" height="81"/>
                     <state key="normal">
@@ -29,12 +38,15 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYp-09-Rwe">
-                    <rect key="frame" x="44" y="378" width="292" height="81"/>
-                    <state key="normal">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2m5-ut-S8M">
+                    <rect key="frame" x="39" y="221" width="85" height="66"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOi-S4-4cn">
+                    <rect key="frame" x="39" y="334" width="85" height="70"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-Ph-7yv">
+                    <rect key="frame" x="39" y="109" width="85" height="64"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

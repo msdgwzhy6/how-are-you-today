@@ -12,7 +12,7 @@
 #import "JTDateHelper.h"
 
 @interface StatisticsViewController ()
-@property (copy,nonatomic) NSArray* sliceColors;
+@property (copy,nonatomic) NSMutableArray* sliceColors;
 @property (strong,nonatomic) NSMutableArray* monthStatistics;
 @property (strong,nonatomic) NSMutableArray* yearStatistics;
 
@@ -71,7 +71,7 @@
         [self.labViews addObject:lab];
         
     }
-    self.sliceColors=[NSArray arrayWithObjects:
+    self.sliceColors=[NSMutableArray arrayWithObjects:
                       [WelcomeViewController getFantasticColor],
                       [WelcomeViewController getOrdinaryColor],
                       [WelcomeViewController getTerribleColor], nil];
@@ -79,10 +79,6 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-//-(void)viewDidUnload {
-//    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"dayDataChanged" object:nil];
-//
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -151,6 +147,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.sliceColors=[NSMutableArray arrayWithObjects:
+                      [WelcomeViewController getFantasticColor],
+                      [WelcomeViewController getOrdinaryColor],
+                      [WelcomeViewController getTerribleColor], nil];
     [self loadStatistics];
     [self.pieChartMonth reloadData];
     for (XYPieChart* chart in self.yearViews) {

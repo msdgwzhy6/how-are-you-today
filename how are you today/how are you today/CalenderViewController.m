@@ -29,6 +29,7 @@
     self.datasource=calendarDataSouece;
     
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(colorHasChanged) name:@"colorChanged" object:nil];
     
     //JTCalender
     _calendarManager=[JTCalendarManager new];
@@ -52,6 +53,10 @@
     [self.view addSubview:colorPickerButton];
     [colorPickerButton addTarget:self action:@selector(presentColorPicker) forControlEvents:UIControlEventTouchUpInside];
                                  
+}
+
+- (void)colorHasChanged {
+    [_calendarManager reload];
 }
 
 - (void)presentColorPicker {
