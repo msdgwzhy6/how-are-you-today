@@ -2,7 +2,7 @@
 
 2015-10-9 update:
 
-Now you can choose one of three color sets as your preference. Hope you enjoy DIY!
+    Now you can choose one of three color sets as your preference. Hope you enjoy DIY!
 
 About How Are You Today:
 
