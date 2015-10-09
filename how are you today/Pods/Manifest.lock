@@ -1,0 +1,10 @@
+PODS:
+  - JTCalendar (2.1.4)
+
+DEPENDENCIES:
+  - JTCalendar (~> 2.0)
+
+SPEC CHECKSUMS:
+  JTCalendar: 9b1352c7ec41cc26b19c189d6608ba48060a53d9
+
+COCOAPODS: 0.38.2
